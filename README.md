@@ -4,7 +4,7 @@ The Template Mailer library provides functionality to encapsulate the creation
 and dispatch of emails. The emails sent by the library are created from templates
 stored locally and allows for the creation of emails that are both HTML and/or
 textual based. The library makes use of the [Tilt](https://github.com/rtomayko/tilt)
-template library and the [Pony](https://github.com/benprew/pony libraries and
+template library and the [Pony](https://github.com/benprew/pony) libraries and
 aspects of these interactions are exposed via configuration settings.
 
 ## Installation
