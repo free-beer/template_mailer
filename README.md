@@ -70,7 +70,7 @@ based clients then create to files in the template directory with ```.text``` an
 generate content from them both for the email message to be sent.
 
 Note that when calling ```generate_mail()``` you can pass a Hash of context
-parmaeters as the second parameter to the method call. The values within this
+parameters as the second parameter to the method call. The values within this
 Hash will be available to populate the message templates with. So, for example,
 if you wanted to pass in a parameter called full name you would make a call that
 looked like this...
