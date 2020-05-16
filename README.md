@@ -47,12 +47,12 @@ folder the code to create a ```Mailer``` might look as follows...
 ```ruby
 mailer = TemplateMailer::Mailer.new(directory: "/templates",
                                     server: {address:              'mymail.smtp.com',
-														   port:                 '587',
-														   enable_starttls_auto: true,
-														   user_name:            'mymailuser',
-														   password:             'password',
-														   authentication:       :login,
-														   domain:               "mydomain.com"},
+                                             port:                 '587',
+                                             enable_starttls_auto: true,
+                                             user_name:            'mymailuser',
+                                             password:             'password',
+                                             authentication:       :login,
+                                             domain:               "mydomain.com"},
                                     via: :smtp)
 ```
 
