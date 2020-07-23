@@ -53,13 +53,15 @@ module TemplateMailer
     # recognised as templates based on extensions from the object itself and
     # the engine it possesses.
     def scan_templates
-    	@templates = Dir.glob(File.join(path, "*")).inject([]) do |list, file_path|
+      @templates = Dir.glob(File.join(path, "*")).inject([]) do |list, file_path|
         log.debug "Checking if #{file_path} is a recognised template file."
-        file_name = File.basename(file_path)
-        log.debug "#{file_path} is a template file." if !(Tilt[file_name]).nil?
-        list << file_path if !(Tilt[file_name]).nil?
+        if File.file?(file_path)
+          file_name = File.basename(file_path)
+          log.debug "#{file_path} is a template file." if !(Tilt[file_name]).nil?
+          list << file_path if !(Tilt[file_name]).nil?
+        end
         list
-    	end
+      end
     end
   end
 end

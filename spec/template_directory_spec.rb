@@ -8,6 +8,14 @@ describe TemplateMailer::TemplateDirectory do
 		TemplateMailer::TemplateDirectory.new(path)
 	}
 
+    describe "construction" do
+        it "doesn't get trip up by directories that have names matching template types" do
+            expect {
+                TemplateMailer::TemplateDirectory.new(File.join(path, "dir_name_check"))
+            }.not_to raise_error
+        end
+    end
+
 	describe "#path()" do
 		it "returns the path to the template directory" do
 			expect(subject.path).to eq(path)
